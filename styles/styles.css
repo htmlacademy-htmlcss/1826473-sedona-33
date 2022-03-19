@@ -22,12 +22,13 @@ html {
 *::before,
 *::after {box-sizing: border-box;}
 
-#sedona-picture {
+.sedona-picture {
   background: no-repeat url("../images/sedona-style.svg")  0% 100%, url("../images/index-background.jpeg")  no-repeat ;
   height: 485px;
+  background-color: #83B3D3;
 }
 
-#numberfav{
+.numberfav{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +39,7 @@ html {
   top: calc(50% - 20px/2 - 9px);
   background: #7DB54F;
   border-radius: 50%;
-  font-family: PT Sans;
+  font-family:"PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 10px;
@@ -46,7 +47,7 @@ html {
   color: #FFFFFF;
 }
 
-#favor{
+.favor{
   position: absolute;
   width: 18.05px;
   height: 17px;
@@ -177,11 +178,11 @@ body {
   fill:rgba(117,98,87,0.3);
 }
 
-#numberfav:hover{
+.numberfav:hover{
   color:rgba(255,255,255,1);
 }
 
-#numberfav:active{
+.numberfav:active{
   color:rgba(255,255,255,0.3);
 }
 
@@ -304,7 +305,7 @@ body {
   width: 100%;
 }
 .advantages-item h3{
-  font-family: PT Sans;
+  font-family:"PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -312,7 +313,7 @@ body {
 }
 
 .advantages-item span, p{
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -547,9 +548,10 @@ body {
 }
 
 .sign-up-background{
-  background: no-repeat url("../images/background.jpeg");
+  background: no-repeat url("../images/sign-up-background.jpeg");
   color:#ffffff;
   height:411px;
+  background-color: #83B3D3;
 }
 
 .sign-up-div{
@@ -883,7 +885,7 @@ input[type="checkbox"]{
 /*checkbox*/
 .control-input[type="checkbox"]:checked + .control-mark::before{
   position: absolute;
-  background-image: url("../images/checked.svg");
+  background-image: url("../images/check.svg");
   fill: #3F5E72;
   background-repeat: no-repeat;
   background-position: center;
@@ -1087,6 +1089,7 @@ input[type="checkbox"]{
   margin: 0;
   padding: 0;
   list-style-type: none;
+  max-width: 370px;
 }
 
 .pagination-item:not(:last-child) {
@@ -1163,7 +1166,7 @@ input[type="checkbox"]{
   width: 283px;
   outline:2px solid #e6e6e6;
   border-radius:4px;
-  background-image: url("../images/vectorV.svg");
+  background-image: url("../images/arrow-bottom.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
@@ -1185,13 +1188,13 @@ input[type="checkbox"]{
 }
 
 .pagination-show-more{
-  font: inherit;
+  font-family: inherit;
   background-color: #ffffff;
   margin-top: 5px;
   width: 156px;
   outline:2px solid #e6e6e6;
   border-radius:4px;
-  background-image: url("../images/vectorV.svg");
+  background-image: url("../images/arrow-bottom.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   appearance: none;
@@ -1401,7 +1404,7 @@ a{
 }
 
 .sign-up-description{
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -1486,7 +1489,6 @@ a{
   margin: auto;
   padding: 62px 70px 70px 70px;
   background-color: #ffffff;
-  display: none;
 }
 
 .modal-content{
@@ -1494,11 +1496,10 @@ a{
 }
 
 .modal-container {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  /* display: flex; */
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
@@ -1575,9 +1576,12 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+/* input[type="number"] {
   -moz-appearance: textfield;
-}
+} */
+
+
+
 
 .input-error {
   margin:0;
@@ -1727,7 +1731,7 @@ input[type=number] {
 }
 
 .auth-form-field.field{
-  font-family:"PT Sans", sans-serif; ;
+  font-family:"PT Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
   margin: 0 0 7px 50px;
@@ -1842,7 +1846,7 @@ input[type=number] {
 
 .tooltip-text:before {
   content:'';
-  background-image: url("../images/toltip-arrow.svg");
+  background-image: url("../images/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
   position:absolute;
@@ -1979,8 +1983,11 @@ input[type=number] {
 }
 
 .emailactive:focus{
+
   background:#e6e6e6;
-  border:3px solid #83B3D3;
+  outline:3px solid #83B3D3;
+
+
 }
 
 .emailactive:disabled{
@@ -1996,7 +2003,7 @@ input[type=number] {
   justify-content: center;
   align-items: center;
   border-radius: 0px 10px 10px 0px ;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -2032,4 +2039,11 @@ input[type=number] {
 
 .newsletter a{
   text-decoration: #ffffff;
+}
+
+.small-city{
+  height: 100%;
+}
+.devil-road{
+  height: 100%;  
 }
